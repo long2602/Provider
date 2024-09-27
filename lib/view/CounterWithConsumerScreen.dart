@@ -56,7 +56,7 @@ class _CounterWithConsumerScreenState extends State<CounterWithConsumerScreen> {
                 heroTag: null,
                 backgroundColor: Colors.red,
                 onPressed: () {
-                  counterProvider.increase2();
+                  counterProvider.increase();
                 },
                 label: Text('Consumer 1'),
                 icon: Icon(Icons.add),
@@ -66,7 +66,7 @@ class _CounterWithConsumerScreenState extends State<CounterWithConsumerScreen> {
                 heroTag: null,
                 backgroundColor: Colors.blue,
                 onPressed: () {
-                  counterProvider.decrease2();
+                  counterProvider.increase2();
                 },
                 label: Text('Consumer 2'),
                 icon: Icon(Icons.minimize),

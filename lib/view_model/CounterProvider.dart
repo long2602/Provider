@@ -19,12 +19,12 @@ class CounterProvider extends ChangeNotifier {
   }
 
   void increase2() {
-    _counter++;
+    _counter2++;
     notifyListeners();
   }
 
   void decrease2() {
-    _counter--;
+    _counter2--;
     notifyListeners();
   }
 
