@@ -57,6 +57,7 @@ class _CounterWithSelectorScreenState extends State<CounterWithSelectorScreen> {
             mainAxisAlignment: MainAxisAlignment.end,
             children: <Widget>[
               FloatingActionButton.extended(
+                heroTag: null,
                 backgroundColor: Colors.red,
                 onPressed: () {
                   counterProvider.increase2();
@@ -66,6 +67,7 @@ class _CounterWithSelectorScreenState extends State<CounterWithSelectorScreen> {
               ),
               Expanded(child: SizedBox()),
               FloatingActionButton.extended(
+                heroTag: null,
                 backgroundColor: Colors.blue,
                 onPressed: () {
                   counterProvider.decrease2();

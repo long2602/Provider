@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:state/view/CounterWithSelectorScreen.dart';
+import 'package:state/view/HomeScreen.dart';
 
 void main() {
   // runApp(ChangeNotifierProvider(create: (context) => CounterProvider(), child: const MyApp()));
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const CounterWithSelectorScreen(),
+      home: const HomeScreen(),
     );
   }
 }

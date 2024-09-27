@@ -12,50 +12,55 @@ class CounterScreen extends StatefulWidget {
 class _CounterScreenState extends State<CounterScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("Counter"),
-      ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Text("${context.watch<CounterProvider>().counter}"),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
+    return ChangeNotifierProvider(
+      create: (context) => CounterProvider(),
+      builder: (context, child) {
+        return Scaffold(
+          appBar: AppBar(
+            title: const Text("Counter"),
+          ),
+          body: Column(
             mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              ElevatedButton(
-                onPressed: () {
-                  context.read<CounterProvider>().decrease();
-                },
-                style: ElevatedButton.styleFrom(
-                  elevation: 0,
-                ),
-                child: Icon(Icons.minimize),
-              ),
-              ElevatedButton(
-                onPressed: () {
-                  context.read<CounterProvider>().restart();
-                },
-                style: ElevatedButton.styleFrom(
-                  elevation: 0,
-                ),
-                child: Icon(Icons.restart_alt),
-              ),
-              ElevatedButton(
-                onPressed: () {
-                  context.read<CounterProvider>().increase();
-                },
-                style: ElevatedButton.styleFrom(
-                  elevation: 0,
-                ),
-                child: Icon(Icons.add),
+              Text("${context.watch<CounterProvider>().counter}"),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ElevatedButton(
+                    onPressed: () {
+                      context.read<CounterProvider>().decrease();
+                    },
+                    style: ElevatedButton.styleFrom(
+                      elevation: 0,
+                    ),
+                    child: Icon(Icons.minimize),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      context.read<CounterProvider>().restart();
+                    },
+                    style: ElevatedButton.styleFrom(
+                      elevation: 0,
+                    ),
+                    child: Icon(Icons.restart_alt),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      context.read<CounterProvider>().increase();
+                    },
+                    style: ElevatedButton.styleFrom(
+                      elevation: 0,
+                    ),
+                    child: Icon(Icons.add),
+                  ),
+                ],
               ),
             ],
           ),
-        ],
-      ),
+        );
+      },
     );
   }
 }

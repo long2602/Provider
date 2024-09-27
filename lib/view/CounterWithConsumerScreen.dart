@@ -53,6 +53,7 @@ class _CounterWithConsumerScreenState extends State<CounterWithConsumerScreen> {
             mainAxisAlignment: MainAxisAlignment.end,
             children: <Widget>[
               FloatingActionButton.extended(
+                heroTag: null,
                 backgroundColor: Colors.red,
                 onPressed: () {
                   counterProvider.increase2();
@@ -62,6 +63,7 @@ class _CounterWithConsumerScreenState extends State<CounterWithConsumerScreen> {
               ),
               Expanded(child: SizedBox()),
               FloatingActionButton.extended(
+                heroTag: null,
                 backgroundColor: Colors.blue,
                 onPressed: () {
                   counterProvider.decrease2();
